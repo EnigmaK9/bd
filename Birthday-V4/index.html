@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Un Cuento de Cumpleaños Mágico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-container"></div>
+    <audio id="backgroundMusic" loop src="magical_music.mp3"></audio>
+
+    <div class="step active" id="step1">
+        <div class="gift-container" id="giftContainer">
+            <div class="gift-box">
+                <div class="gift-lid"></div>
+                <div class="gift-bow"></div>
+            </div>
+            <p class="instruction-text">Una sorpresa te espera...</p>
+        </div>
+    </div>
+
+    <div class="step" id="step2">
+        <div class="key-container" id="keyContainer">
+            <svg id="animatedKey" class="key-svg" viewBox="0 0 100 100">
+                <path d="M60,20 Q50,10 40,20 T20,20 Q10,25 20,30 T40,30 Q50,35 40,40 L40,70 L35,75 L35,80 L40,85 L45,80 L45,75 L40,70" stroke-width="5" stroke-linecap="round" fill="none"/>
+            </svg>
+            <p class="instruction-text">Da click para desbloquear...</p>
+        </div>
+    </div>
+
+    <div class="step" id="step3">
+        <div class="storybook-container" id="storybookContainer">
+            <div class="book">
+                <div class="book-cover" id="bookCover">
+                    <div class="cover-front">
+                        <h2 class="book-title">Anel ✨</h2>
+                    </div>
+                    <div class="cover-back"></div>
+                </div>
+                
+                <div class="page" id="page1">
+                    <div class="page-back">
+                        <p class="page-text">Step out! A new 5-Star chapter begins today...</p>
+                    </div>
+                </div>
+                
+                <div class="page" id="page2">
+                    <div class="page-back">
+                        <p class="page-text">May you shine this year with absolute S-Class energy...</p>
+                    </div>
+                </div>
+                
+                <div class="page" id="page3">
+                    <div class="page-back">
+                        <p class="page-text">And always find your own 'Haven' full of laughter and peace...</p>
+                    </div>
+                </div>
+                
+                <div class="page" id="page4">
+                    <div class="page-back">
+                        <p class="page-text">Always remember: You make Stray Kids STAY ♾️</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="step" id="step5">
+        <div class="finale-container">
+            <div class="finale-card">
+                <svg class="floral-svg" viewBox="0 0 400 400">
+                    <path id="vine1" d="M10,200 C40,100 150,100 200,200 S360,300 390,200" />
+                    <path id="vine2" d="M10,210 C40,310 150,310 200,210 S360,110 390,210" />
+                </svg>
+                <h1 class="finale-greeting">¡Feliz Cumpleaños!</h1>
+                <h2 class="finale-name">Anel!</h2>
+                <p class="finale-wish">Deseándote un día nivel God's Menu, ¡absolutamente espectacular y a tu medida! Que este año vueles más alto que en MIROH y todos tus sueños se cumplan. ¡Te queremos mucho, STAY!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
