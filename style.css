@@ -267,3 +267,55 @@ body {
     .finale-wish { font-size: 0.9rem; }
     .finale-card { padding: 25px; }
 }
+
+/* --- Estilos para el Álbum de Fotos Final --- */
+.photo-album {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 35px;
+    flex-wrap: wrap; /* Permite que se acomoden bien en celulares */
+}
+
+.photo {
+    background: #ffffff;
+    padding: 10px 10px 25px 10px; /* Crea el borde inferior grueso tipo Polaroid */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+    border-radius: 4px;
+    opacity: 0; /* Ocultas al principio */
+}
+
+.photo img {
+    width: 130px; /* Tamaño de las fotos */
+    height: 130px;
+    object-fit: cover; /* Evita que las fotos se deformen o estiren */
+    border-radius: 2px;
+}
+
+/* Animaciones individuales para que caigan giradas y a destiempo */
+.polaroid-1 {
+    transform: scale(0.8) rotate(-15deg);
+    animation: popIn1 0.6s 2s forwards; /* Aparece a los 2 segundos */
+}
+@keyframes popIn1 { to { opacity: 1; transform: scale(1) rotate(-10deg); } }
+
+.polaroid-2 {
+    transform: scale(0.8) rotate(5deg);
+    animation: popIn2 0.6s 2.3s forwards; /* Aparece a los 2.3 segundos */
+    z-index: 2; /* Para que quede un poco por encima */
+}
+@keyframes popIn2 { to { opacity: 1; transform: scale(1) rotate(5deg); } }
+
+.polaroid-3 {
+    transform: scale(0.8) rotate(-5deg);
+    animation: popIn3 0.6s 2.6s forwards; /* Aparece a los 2.6 segundos */
+}
+@keyframes popIn3 { to { opacity: 1; transform: scale(1) rotate(-5deg); } }
+
+/* Ajuste para móviles */
+@media (max-width: 480px) {
+    .photo img { width: 90px; height: 90px; }
+    .photo { padding: 8px 8px 20px 8px; }
+    .photo-album { gap: 10px; margin-top: 20px; }
+}
